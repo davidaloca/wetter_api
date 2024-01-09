@@ -1,0 +1,19 @@
+<html>
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <title>Wetter-App</title>
+   </head>
+   <body>
+    {% if weather %}
+   <h2>Wetter in {{ weather.city }}</h2>
+   <p>Temperatur: {{ weather.temperature }} °C</p>
+   <p>Beschreibung: {{ weather.description }}</p>
+   {% endif %}
+       <form action="/" method="post">
+           <label for="city">Stadt:</label>
+           <input type="text" id="city" name="city">
+           <input type="submit" value="Wetter abrufen">
+       </form>
+   </body>
+   </html>
